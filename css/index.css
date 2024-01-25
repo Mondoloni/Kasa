@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 68px;
+  margin-top: 50px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+@media screen and (max-width: 440px) {
+  .header {
+    height: 47px;
+    margin: 20px 20px 27px 20px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .header img {
+    width: 145px;
+    height: 47px;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: 20px;
+  width: 309px;
+  height: 34px;
+}
+@media screen and (max-width: 440px) {
+  .nav {
+    align-items: center;
+    height: 47px;
+    width: 100%;
+  }
+}
+.nav-link {
+  text-decoration: none;
+}
+.nav-active {
+  text-decoration: underline;
+}
+
+.nav-link,
+.nav-active {
+  padding-left: 35px;
+  font-family: Montserrat;
+  color: #ff6060;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 34px;
+  text-align: right;
+}
+@media screen and (max-width: 440px) {
+  .nav-link,
+  .nav-active {
+    font-size: 12px;
+    line-height: 17px;
+  }
+}
+
+.div_footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 209px;
+  width: 100%;
+  background-color: #000000;
+  margin: 10px 0px;
+}
+@media screen and (max-width: 440px) {
+  .div_footer {
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
+  }
+}
+.div_footer img {
+  width: 122px;
+  height: 39px;
+}
+.div_footer h3 {
+  font-family: Montserrat;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 34px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 440px) {
+  .div_footer h3 {
+    font-size: 12px;
+    line-height: 142%;
+    padding: 0px 38% 0px 38%;
+  }
+}

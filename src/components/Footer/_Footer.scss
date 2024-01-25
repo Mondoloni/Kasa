@@ -1,0 +1,38 @@
+@import '../../style/utils/variables';
+
+.div_footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 209px;
+    width: 100%;
+    background-color: $footer-color;
+    margin:10px 0px;
+@media screen and (max-width:440px) 
+    {
+       padding:0px 0px 0px 0px; 
+       margin:0px;
+    }
+    & img{
+        width: 122px;
+        height: 39px;
+    }
+    
+    & h3{
+        font-family: $font-familly;
+        color:#ffffff;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 34px;
+        margin-top:30px;
+        margin-bottom: 10px;
+        @media screen and (max-width:440px) 
+        {
+            font-size: 12px;
+            line-height: 142%;
+            
+            padding:0px 38% 0px 38%;
+        }
+    }
+}
