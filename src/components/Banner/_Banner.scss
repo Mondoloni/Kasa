@@ -1,0 +1,40 @@
+.banner{
+    background: #000;
+    border-radius: 25px;
+    mix-blend-mode: darken;
+    height: 223px;
+    position:relative;
+    @media screen and (max-width:440px) 
+        {
+            height: 111px;
+        }
+    &-img{
+        border-radius: 25px;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+        opacity: 0.7;
+    }
+    &-texte{
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 142%;
+        margin: 0;
+        left:23%;
+        top:35%;
+        position: absolute;
+        @media screen and (max-width:440px) 
+        { 
+            font-size: 24px;
+            line-height: 100%;
+            height: 47px;
+            margin-right: 145px;
+            text-align: left;
+            left:7%;
+            top:30%;
+        }
+    }
+}

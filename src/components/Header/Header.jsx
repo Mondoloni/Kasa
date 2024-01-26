@@ -1,7 +1,7 @@
 import React from "react";
 // import './_Header.scss'
 import { NavLink, Link } from "react-router-dom";
-import logo from '../../assets/logo/LOGO.png'
+import logo from '../../assets/logo/LOGO.png';
 
 
 function Header(){

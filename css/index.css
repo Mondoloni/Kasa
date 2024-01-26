@@ -15,8 +15,8 @@ code {
   justify-content: space-between;
   height: 68px;
   margin-top: 50px;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 @media screen and (max-width: 440px) {
   .header {
@@ -71,6 +71,76 @@ code {
   }
 }
 
+.body {
+  margin: 50px 100px 50px 100px;
+}
+@media screen and (max-width: 440px) {
+  .body {
+    margin: 27px 20px 27px 20px;
+  }
+}
+
+.card {
+  margin: 40px 0px 50px 0px;
+  border-radius: 25px;
+  background: #F6F6F6;
+  padding: 0px 50px 43px 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+@media screen and (max-width: 440px) {
+  .card {
+    margin: 20px 0px 30px 0px;
+    padding: 0px 50px 5px 50px;
+  }
+}
+
+.banner {
+  background: #000;
+  border-radius: 25px;
+  mix-blend-mode: darken;
+  height: 223px;
+  position: relative;
+}
+@media screen and (max-width: 440px) {
+  .banner {
+    height: 111px;
+  }
+}
+.banner-img {
+  border-radius: 25px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  opacity: 0.7;
+}
+.banner-texte {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142%;
+  margin: 0;
+  left: 23%;
+  top: 35%;
+  position: absolute;
+}
+@media screen and (max-width: 440px) {
+  .banner-texte {
+    font-size: 24px;
+    line-height: 100%;
+    height: 47px;
+    margin-right: 145px;
+    text-align: left;
+    left: 7%;
+    top: 30%;
+  }
+}
+
 .div_footer {
   display: flex;
   flex-direction: column;
@@ -106,4 +176,45 @@ code {
     line-height: 142%;
     padding: 0px 38% 0px 38%;
   }
+}
+
+.card-div {
+  width: 340px;
+  height: 340px;
+  border-radius: 10px;
+  background: #FF6060;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  margin-top: 50px;
+}
+@media screen and (max-width: 440px) {
+  .card-div {
+    margin-top: 20px;
+  }
+}
+
+.card-link {
+  text-decoration: none;
+}
+
+.card-div img {
+  height: 340px;
+  width: 340px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-titre {
+  z-index: 1;
+  bottom: 52%;
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142%;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 115px;
+  position: relative;
 }
