@@ -16,7 +16,7 @@ return (
 					}>Accueil</NavLink>
              <NavLink to="/APropos" className={({ isActive }) =>
 						isActive ? 'nav-active' : 'nav-link'
-					}>A propos</NavLink>
+					}>A Propos</NavLink>
         </nav>     
     </header>
 

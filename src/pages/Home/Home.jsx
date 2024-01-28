@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import '../../index.scss';
 import Banner from '../../components/Banner/Banner';
 import banner_accueil from '../../assets/banner/banner_accueil.png';
