@@ -5,6 +5,7 @@ import banner_accueil from '../../assets/banner/banner_accueil.png';
 import { useFetch } from '../../style/Hooks/Hooks';
 import { Loader } from '../../style/utils/Atom';
 import Card from '../../components/Card/Card';
+import Error from '../../components/Error/Error';
 
 
  
@@ -12,7 +13,7 @@ function Home(){
 
 const {data,isLoading,error}=useFetch('./logements.json')
 if (error) {
-    return <span>Oups il y a eu un problème</span>
+    return <Error />
   }
     return (
         
