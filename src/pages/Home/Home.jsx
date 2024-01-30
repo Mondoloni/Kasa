@@ -15,6 +15,7 @@ const {data,isLoading,error}=useFetch('./logements.json')
 if (error) {
     return <Error />
   }
+
     return (
         
         <div className='body'>

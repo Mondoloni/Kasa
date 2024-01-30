@@ -367,3 +367,95 @@ code {
     margin: 0px 50px 110px 50px;
   }
 }
+
+.logement {
+  margin: 50px 100px 30px 100px;
+  height: 415px;
+}
+@media screen and (max-width: 440px) {
+  .logement {
+    height: 255px;
+    margin: 27px 20px 15px 20px;
+  }
+}
+
+.carrousel {
+  height: 415px;
+}
+@media screen and (max-width: 440px) {
+  .carrousel {
+    height: 255px;
+  }
+}
+.carrousel-image {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 415px;
+  border-radius: 25px;
+  margin: 0px;
+  position: relative;
+  top: -22%;
+}
+@media screen and (max-width: 440px) {
+  .carrousel-image {
+    height: 255px;
+    top: -12%;
+  }
+}
+.carrousel-retour {
+  z-index: 1;
+  position: relative;
+  top: 35%;
+  left: 1%;
+  visibility: visible;
+}
+@media screen and (max-width: 440px) {
+  .carrousel-retour {
+    height: 24px;
+    top: 44%;
+  }
+}
+.carrousel-avance {
+  z-index: 1;
+  position: relative;
+  left: 96%;
+  top: -87%;
+  visibility: visible;
+}
+@media screen and (max-width: 440px) {
+  .carrousel-avance {
+    height: 24px;
+    top: -67%;
+  }
+}
+.carrousel-page {
+  color: #FFF;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%;
+  position: absolute;
+  right: 50%;
+  top: 57%;
+  visibility: visible;
+}
+@media screen and (max-width: 440px) {
+  .carrousel-page {
+    visibility: hidden;
+  }
+}
+
+.one .carrousel-page {
+  visibility: hidden;
+}
+
+.one .carrousel-retour {
+  visibility: hidden;
+}
+
+.one .carrousel-avance {
+  visibility: hidden;
+}

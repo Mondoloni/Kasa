@@ -1,0 +1,77 @@
+.carrousel{
+    height:415px;
+    @media screen and (max-width:440px) 
+    {
+        height:255px;
+    }
+    &-image{
+        width:100%;
+        object-fit:cover;
+        height:415px;
+        border-radius: 25px;
+        margin:0px;
+        position: relative;
+        top:-22%;
+        @media screen and (max-width:440px) 
+        {
+            height:255px;
+            top:-12%;
+        }
+        
+    }
+    &-retour{
+        z-index: 1;
+        position:relative;
+        top:35%;
+        left:1%;
+        visibility: visible;
+        @media screen and (max-width:440px) 
+        {
+            height:24px;
+            top:44%;
+        }
+    }
+
+    &-avance{
+        z-index: 1;
+        position:relative;
+        left:96%;
+        top:-87%;
+        visibility: visible;
+        @media screen and (max-width:440px) 
+        {
+            height:24px;
+            top:-67%;
+        }
+    }
+
+    &-page{
+        color: #FFF;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 142.6%;
+        position:absolute;
+        right:50%;
+        top:57%;
+        visibility: visible;
+        @media screen and (max-width:440px) 
+        {
+            visibility: hidden;
+        }
+    }
+}
+
+.one .carrousel-page{
+    visibility: hidden;
+}
+
+.one .carrousel-retour{
+    visibility: hidden; 
+}
+
+.one .carrousel-avance{
+    visibility: hidden; 
+}
