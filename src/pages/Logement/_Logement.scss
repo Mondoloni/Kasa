@@ -1,9 +1,135 @@
 .logement{
+    display: flex;
+    flex-direction: column;
     margin:50px 100px 30px 100px;
-    height:415px;
+    // height:415px;
     @media screen and (max-width:440px) 
     {
-        height:255px;
+        // height:255px;
         margin:27px 20px 15px 20px;
+    }
+}
+
+.description{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
+    @media screen and (max-width:440px) 
+    {
+        flex-direction: column;
+    }
+    &-titre{
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 51px;
+        color: #FF6060;
+        margin:10px 0px 5px 0px;
+        @media screen and (max-width:440px) 
+        {
+            font-size: 18px;
+            line-height: 26px;
+        }
+    }
+
+    &-localisation{
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25px;
+        color: #FF6060;
+        margin:5px 0px 5px 0px;
+        @media screen and (max-width:440px) 
+        {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+    &-tag{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.nom_etoiles{
+    @media screen and (max-width:440px) 
+    {
+        display: flex;
+        flex-direction:row-reverse;
+        justify-content: space-between;
+    }
+    &-div{
+        display: flex;
+        flex-direction: row;
+        @media screen and (max-width:440px) 
+            {
+                align-items: center;
+            }
+        &-img{
+            width:64px;
+            height: 64px;
+            margin: 0px 0px 0px 10px;
+            border-radius: 30px;
+            @media screen and (max-width:440px) 
+            {
+                width:32px;
+                height: 32px;
+            }
+        }
+    }
+    &-identite{
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: right;
+        color: #FF6060;
+        padding-top: 5px;
+        @media screen and (max-width:440px) 
+        {
+            font-size: 12px;
+            line-height: 17px;
+        }
+        &-h3{
+            font-family: Montserrat;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 25px;
+            text-align: right;
+            color: #FF6060;
+            margin:2px 0px 2px 0px; 
+            @media screen and (max-width:440px) 
+        {
+            font-size: 12px;
+            line-height: 17px;
+        }
+        }
+    }
+  
+}
+
+.dropdown{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+    @media screen and (max-width:440px) 
+    {
+        flex-direction: column;
+        margin-top:5px;
+    }
+
+    & div{
+        padding-left:0px;
+        padding-right: 0px;
+        width:47%;
+        @media screen and (max-width:440px) 
+        {
+            width:100%;
+        }
+    }
+    &-title{
+        height:52px;
     }
 }

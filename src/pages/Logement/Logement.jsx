@@ -4,6 +4,9 @@ import Carrousel from '../../components/Carrousel/Carrousel';
 import { Loader } from '../../style/utils/Atom';
 import Error from '../../components/Error/Error';
 import { useParams } from 'react-router-dom';
+import Tag from '../../components/Tag/Tag';
+import Stars from '../../components/Stars/Stars';
+import Collapse from '../../components/Collapse/Collapse';
 
 
 function Logement(){
@@ -15,25 +18,65 @@ function Logement(){
     return <Error />
     }
 
-    let annonceSelect
-  if(!isLoading){annonceSelect = data.filter(annonce=>annonce.id === logementId)
+let annonceSelect
+let identite
+let listeEquipements =[]
+if(!isLoading)
+  {
+    annonceSelect = data.find(annonce=>annonce.id === logementId)
+    identite=annonceSelect.host.name.split(' ')
 
-}
-        
+    listeEquipements=annonceSelect.equipments.map((equ,index)=>{
+        return <li key={index}>{equ}</li>
+    })
+
+    }
+
     return(
         <div className='logement'>
           {isLoading ? (
                     <Loader/>
                 ):(
-                    // <div>
+            <section>
                         <Carrousel
-                        pictures={annonceSelect[0].pictures}
+                        pictures={annonceSelect.pictures}
                         />
-                // </div>
+                <div className='description'>
+                    <div className='titre_tags'>
+                        <h2 className='description-titre'>{annonceSelect.title}</h2>
+                        <h3 className='description-localisation'>{annonceSelect.location}</h3>
+                        <div className='description-tag'><Tag data={annonceSelect.tags} /></div>
+                    </div>
+                    <div className='nom_etoiles'>
+                        <div className='nom_etoiles-div'>
+                            <div className='nom_etoiles-identite'>
+                                <h3 className='nom_etoiles-identite-h3'>{identite[0]}</h3>
+                                <h3 className='nom_etoiles-identite-h3'>{identite[1]}</h3>
+                            </div>
+                            <img src={annonceSelect.host.picture} alt={annonceSelect.host.name} className='nom_etoiles-div-img'></img>
+                        </div>
+                            <Stars
+                            rating={parseInt(annonceSelect.rating)}
+                            />
+                    </div>
+                </div>
+                <div className='dropdown'>
+                    <Collapse
+                     key="description"
+                     title="Description"
+                     texte={annonceSelect.description}
+                    />
+                    <Collapse
+                     key="equipements"
+                     title="Équipements"
+                     texte={listeEquipements}
+                    />
+                </div>
+            </section>
                 )}
       
+            
          </div>
-    
     )
 }
 

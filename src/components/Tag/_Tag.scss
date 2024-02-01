@@ -1,0 +1,18 @@
+.description-tag-h3{
+    border-radius: 25px;
+    background-color: #FF6060;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    padding:5px 15px 5px 15px;
+    margin-right: 10px;
+    @media screen and (max-width:440px) 
+    {
+        font-size: 10px;
+        line-height: 14px;
+        margin-bottom: 0px;
+    }
+
+}
