@@ -7,6 +7,8 @@ import { useParams } from 'react-router-dom';
 import Tag from '../../components/Tag/Tag';
 import Stars from '../../components/Stars/Stars';
 import Collapse from '../../components/Collapse/Collapse';
+import { useNavigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
 
 function Logement(){
@@ -24,19 +26,23 @@ let listeEquipements =[]
 if(!isLoading)
   {
     annonceSelect = data.find(annonce=>annonce.id === logementId)
-    identite=annonceSelect.host.name.split(' ')
-
-    listeEquipements=annonceSelect.equipments.map((equ,index)=>{
-        return <li key={index}>{equ}</li>
-    })
-
+    if(annonceSelect!==undefined){
+        identite=annonceSelect.host.name.split(' ')
+        listeEquipements=annonceSelect.equipments.map((equ,index)=>{
+            return <li key={index}>{equ}</li>
+        })
+    
+    }
+  
     }
 
     return(
         <div className='logement'>
-          {isLoading ? (
+          {
+          isLoading ? (
                     <Loader/>
                 ):(
+            (annonceSelect!==undefined) ?(
             <section>
                         <Carrousel
                         pictures={annonceSelect.pictures}
@@ -73,7 +79,7 @@ if(!isLoading)
                     />
                 </div>
             </section>
-                )}
+                ):(<Navigate replace to="/404/"></Navigate>))}
       
             
          </div>

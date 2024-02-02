@@ -15,7 +15,7 @@ return(
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/APropos" element={<APropos/>} />
-      <Route path="/Logement/:logementId" element={<Logement/>} />
+      <Route exact path="/Logement/:logementId" element={<Logement/>} />
       <Route path="*" element={<Error />} />
     </Routes>
     <Footer />
